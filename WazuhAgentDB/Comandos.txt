@@ -1,0 +1,12 @@
+-- Para correr imagen
+docker-compose up -d
+docker ps
+
+--Para verificar creacion y contenidos de tabla
+--Se puede cambiar lo que sigue de -c por cualquier comando de postgre
+docker exec -it postgres psql -U admin -d wazuhagentdb -c "SELECT * FROM vulnerabilities;"
+
+-- Para verificar que el contenido de la base de datos se guardo, correr
+docker volume ls
+-- Luego con el resultado, correr
+docker volume inspect resultado_db_data

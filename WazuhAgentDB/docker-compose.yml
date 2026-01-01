@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  db:
+    # Version de postgre
+    image: postgres:15-alpine
+    # Nombre del contenedor, tambien puede ser variable de entorno
+    container_name: wazuhAgentDb
+    restart: always
+    environment:
+      # Cambiar a variables de entorno establecidas en jenkins
+      POSTGRES_USER: ${DB_USER:-admin}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-1234}
+      POSTGRES_DB: ${DB_NAME:-wazuhagentdb}
+    # Cambiar a puerto como variable de entorno que se necesite
+    ports:
+      - "${DB_PORT:-5432}:5432"
+    volumes:
+      # Correr el script the inicializacion. Si esta en otro lugar, cambiar por el path
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+      # Guardar la informacion de la base de datos como persistencia
+      - db_data:/var/lib/postgresql/data
+
+    # Healthcheck para que se asegure que este corriendo, antes de seguir con el docker compose (la aplicacion como tal)
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-admin} -d ${DB_NAME:-wazuhagentdb}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+  # Seccion donde ira el servicio de java
+
+volumes:
+  db_data:      
