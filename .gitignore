@@ -1,12 +1,12 @@
 ##############################
 ## Containers 
 ##############################
-jenkins/jenkins_home
-sonarqube/sonarqube_data
-sonarqube/sonarqube_logs
-sonarqube/sonarqube_extrensions
-sonarqube/postgresql_data
-owasp_zap/zap_reports
+pipeline/jenkins/jenkins_home/
+pipeline/sonarqube/sonarqube_data/
+pipeline/sonarqube/sonarqube_logs/
+pipeline/sonarqube/sonarqube_extrensions/
+pipeline/sonarqube/postgresql_data/
+pipeline/owasp_zap/zap_reports/
 
 ##############################
 ## Java
