@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools { 
-        maven 'mvn-local' 
+        maven 'maven-local' 
     }
     stages {
         stage('Clone Code') {
@@ -17,7 +17,7 @@ pipeline {
         stage('SonarQube Analysis') {
             steps {
                 script {
-                    scannerHome = tool 'sonar-local'// must match the name of an actual scanner installation directory on your Jenkins build agent
+                    scannerHome = tool 'sonar-scanner'// must match the name of an actual scanner installation directory on your Jenkins build agent
                 }
                 withSonarQubeEnv('sonar-local') {
                     sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=test -Dsonar.projectName=test -Dsonar.sources=src/ -Dsonar.java.binaries=target/classes -Dsonar.java.libraries=/var/jenkins_home/.m2/**/*.jar"
