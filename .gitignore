@@ -1,4 +1,14 @@
 ##############################
+## Containers 
+##############################
+jenkins/jenkins_home
+sonarqube/sonarqube_data
+sonarqube/sonarqube_logs
+sonarqube/sonarqube_extrensions
+sonarqube/postgresql_data
+owasp_zap/zap_reports
+
+##############################
 ## Java
 ##############################
 .mtj.tmp/
