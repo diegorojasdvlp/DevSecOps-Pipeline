@@ -1,25 +1,45 @@
-//example
 pipeline {
     agent any
-    options {
-        skipStagesAfterUnstable()
+    tools { 
+        maven 'mvn-local' 
     }
     stages {
-        stage('Build') {
+        stage('Clone Code') {
             steps {
-                sh 'make'
+                git url: 'https://github.com/diegorojasdvlp/wazuh-export-agent', branch: 'main'
             }
         }
-        stage('Test'){
+        stage('Build for Test') {
             steps {
-                sh 'make check'
-                junit 'reports/**/*.xml'
+                sh 'mvn clean package -DskipTests' // Adjust goals if needed (e.g., install, deploy)
             }
         }
-        stage('Deploy') {
+        stage('SonarQube Analysis') {
             steps {
-                sh 'make publish' //
+                script {
+                    scannerHome = tool 'sonar-local'// must match the name of an actual scanner installation directory on your Jenkins build agent
+                }
+                withSonarQubeEnv('sonar-local') {
+                    sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=test -Dsonar.projectName=test -Dsonar.sources=src/ -Dsonar.java.binaries=target/classes -Dsonar.java.libraries=/var/jenkins_home/.m2/**/*.jar"
+                }
             }
         }
+        //stage('OWASP Dependency Check') {
+        //    steps {
+        //        dependencyCheck additionalArguments: '--scan .', odcInstallation: 'OWASP-DC', publisherPattern: '**/dependency-check-report.xml'
+        //    }
+        //}
+        stage('Quality Gate') {
+            steps {
+                timeout(time: 5, unit: 'MINUTES') {
+                    waitForQualityGate abortPipeline: false
+                }
+            }
+        }
+        //stage('Deploy') {
+        //    steps {
+        //        sh 'docker-compose -f docker-compose-app.yml up -d'
+        //    }
+        //}
     }
 }

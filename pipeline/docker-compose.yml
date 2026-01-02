@@ -1,0 +1,79 @@
+version: "3"
+services:
+  db_pipeline:
+    container_name: postgres
+    image: postgres:12
+    hostname: postgres
+    environment:
+      - POSTGRES_USER=devsecops
+      - POSTGRES_PASSWORD=sonarqube
+      - POSTGRES_DB=sonar
+    volumes:
+      - "./sonarqube/init.sql:/docker-entrypoint-initdb.d/init.sql"
+      - "./sonarqube/postgresql_data:/var/lib/postgresql/data"
+    networks:
+      - cicd
+
+  jenkins:
+    container_name: jenkins
+    image: jenkins/jenkins:lts-jdk21
+    hostname: jenkins
+    ports:
+      - "8080:8080"
+      - "50000:50000"
+    volumes:
+      - "./jenkins/jenkins_home:/var/jenkins_home"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - "$HOME/.ssh:/var/jenkins_home/.ssh"
+    environment:
+      - JAVA_OPTS="-Dhudson.footerURL=http://pruebascicd.org"
+    networks:
+      - cicd
+
+  sonarqube:
+    container_name: sonarqube
+    image: sonarqube:community
+    hostname: sonarqube
+    depends_on:
+      - db_pipeline
+    ports:
+      - "9000:9000"
+    volumes:
+      - "./sonarqube/sonarqube_data:/opt/sonarqube/data"
+      - "./sonarqube/sonarqube_logs:/opt/sonarqube/logs"
+      - "./sonarqube/sonarqube_extensions:/opt/sonarqube/extensions"
+    environment:
+      - SONAR_JDBC_URL=jdbc:postgresql://db_pipeline:5432/sonar
+      - SONAR_JDBC_USERNAME=devsecops
+      - SONAR_JDBC_PASSWORD=sonarqube
+    networks:
+      - cicd
+
+
+  owasp:
+    container_name: owasp-zap
+    image: zaproxy/zap-stable
+    hostname: owasp
+    ports:
+      - "8080:8080"
+    volumes:
+      - "./zap_reports:/zap/wrk"
+    command:
+      - -daemon
+      - -host
+      - "0.0.0.0"
+      - -port
+      - "8080"
+      - -config
+      - "api.addrs.addr.name=0.0.0.0"
+      - -config
+      - "api.addrs.addr.regex=true"
+      - -config
+      - "api.disablekey=true"
+    networks:
+      - cicd
+
+networks:
+  cicd:
+    external: false
+    name: cicd
