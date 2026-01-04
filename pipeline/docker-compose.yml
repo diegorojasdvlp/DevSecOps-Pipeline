@@ -49,27 +49,19 @@ services:
     networks:
       - cicd
 
-
   owasp:
     container_name: owasp-zap
     image: zaproxy/zap-stable
-    hostname: owasp
+    hostname: owasp-zap
     ports:
-      - "8080:8080"
+      - "8091:8091"
+      - "8090:8090"
+    environment:
+      - ZAP_PORT=8091
     volumes:
-      - "./zap_reports:/zap/wrk"
-    command:
-      - -daemon
-      - -host
-      - "0.0.0.0"
-      - -port
-      - "8080"
-      - -config
-      - "api.addrs.addr.name=0.0.0.0"
-      - -config
-      - "api.addrs.addr.regex=true"
-      - -config
-      - "api.disablekey=true"
+      - "./zaproxy/zap/wrk:/zap/wrk"
+      - "./zaproxy/zaproxy.config:/zap/zaproxy.config"
+    command: "zap.sh -daemon -host 0.0.0.0 -port 8091 -configfile zaproxy.config"
     networks:
       - cicd
 

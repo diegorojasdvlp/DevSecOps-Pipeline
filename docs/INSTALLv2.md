@@ -48,7 +48,12 @@
 
 ## 🔍 Iniciar Zaproxy (OWASP ZAP)
 
-> **Pendiente de configuración**
+### Configuración inicial
+- Servicio no requiere mayores configuraciones
+- Modificar llave api.key en archivo `./zaproxy/zaproxy.config` creando una nueva con el siguiente shell:
+    ```bash
+    openssl rand -hex 32
+    ```
 
 ## 🚀 Iniciar Jenkins
 
