@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Clone Code') {
             steps {
-                git url: 'https://github.com/diegorojasdvlp/wazuh-export-agent', branch: 'main'
+                git url: 'https://github.com/diegorojasdvlp/wazuh-export-agent', branch: 'LocalTest'
             }
         }
         stage('Build for Test') {
@@ -24,11 +24,6 @@ pipeline {
                 }
             }
         }
-        //stage('OWASP Dependency Check') {
-        //    steps {
-        //        dependencyCheck additionalArguments: '--scan .', odcInstallation: 'OWASP-DC', publisherPattern: '**/dependency-check-report.xml'
-        //    }
-        //}
         stage('Quality Gate') {
             steps {
                 timeout(time: 2, unit: 'MINUTES') {
@@ -43,8 +38,40 @@ pipeline {
                 }
             }
         }
-
-
+        stage('Deploy for Test') {
+            steps {
+                sh 'nohup java -jar target/wazuh-export-agent-0.0.1-SNAPSHOT.jar > /var/jenkins_home/logs/pentest.log 2>&1 &'
+                sh 'sleep 10s'
+            }
+        }
+        stage('OWASP ZAP Check') {
+            steps {
+                timeout(time: 3, unit: 'MINUTES') {
+                    script {
+                        def response = sh(script: "http://owasp-zap:8091/JSON/spider/action/scan/?apikey=01f9fa39f63adc6b3bbb70d33c6ffbac592bf57d90a87024a9a20c7ff6aa9045&url=http://jenkins:8081/api/vulnerability/critical&maxChildren=&recurse=&contextName=&subtreeOnly=", returnStdout: true).trim()
+                        echo "Response: ${response}"
+                        //response = sh(script: 'curl -s https://api.example.com/data', returnStdout: true).trim()
+                        //echo "Response: ${response}"
+                        //response = sh(script: 'curl -s https://api.example.com/data', returnStdout: true).trim()
+                        //echo "Response: ${response}"
+                    }   
+                }
+            }
+        }
+        //        script {
+        //            def ptest_name = "pentest_test_$BUILD_NUMBER"
+        //            env.PTEST_N = ptest_name
+        //            def ptest_file = ".env"
+        //            env.PTEST_F = ptest_file
+        //            
+        //            def dockerImage = docker.build("${env.PTEST_N}")
+        //        }
+                //sh "docker build ./ --tag ${env.PTEST_N}"
+        //        echo 'Pentest Docker Builded'
+        //        sh "docker run -d --env.file ${env.PTEST_F} -p 7000:8081 --network=cicd ${env.PTEST_N}"
+        //        echo 'Pentest Docker Started'
+        //    }
+        //}
         //stage('Deploy') {
         //    steps {
         //        sh 'docker-compose -f docker-compose-app.yml up -d'
