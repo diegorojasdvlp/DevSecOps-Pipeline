@@ -1,11 +1,24 @@
 -- Crear tabla
 -- CAMBIAR POR NOMBRES DE COLUMNAS Y TABLAS USADAS EN BACKEND
 
-CREATE TABLE IF NOT EXISTS agent_severity(
+CREATE TABLE IF NOT EXISTS agents(
     id BIGSERIAL PRIMARY KEY,
-    agent_name VARCHAR(255) NOT NULL,
-    agent_ip VARCHAR(255) NOT NULL,
-    severity VARCHAR(20) NOT NULL,
-    quantity INTEGER NOT NULL,
+    name VARCHAR(255) NOT NULL,
+    ip VARCHAR(255) NOT NULL,
+    active BOOLEAN NOT NULL,
     date TIMESTAMP NOT NULL
 );
+
+CREATE TABLE IF NOT EXISTS vulnerabilities(
+  id BIGSERIAL PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  serverity INT(32) NOT NULL,
+)
+
+CREATE TABLE IF NOT EXISTS vulnerability_status(
+  id BIGSERIAL PRIMARY KEY,
+  agent BIGINT,
+  vulnerability BIGINT,
+  FOREIGN KEY (agent) REFERENCES agents(id)
+  FOREIGN KEY (vulnerability) REFERENCES vulnerabilities(id)
+)
