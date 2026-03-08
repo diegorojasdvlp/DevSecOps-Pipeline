@@ -12,13 +12,13 @@ CREATE TABLE IF NOT EXISTS agents(
 CREATE TABLE IF NOT EXISTS vulnerabilities(
   id BIGSERIAL PRIMARY KEY,
   name VARCHAR(255) NOT NULL,
-  serverity INT(32) NOT NULL,
-)
+  serverity INT NOT NULL
+);
 
 CREATE TABLE IF NOT EXISTS vulnerability_status(
   id BIGSERIAL PRIMARY KEY,
   agent BIGINT,
   vulnerability BIGINT,
-  FOREIGN KEY (agent) REFERENCES agents(id)
+  FOREIGN KEY (agent) REFERENCES agents(id),
   FOREIGN KEY (vulnerability) REFERENCES vulnerabilities(id)
-)
+);
