@@ -48,34 +48,43 @@ pipeline {
             steps {
                 timeout(time: 3, unit: 'MINUTES') {
                     script {
-                        def response = sh(script: "http://owasp-zap:8091/JSON/spider/action/scan/?apikey=01f9fa39f63adc6b3bbb70d33c6ffbac592bf57d90a87024a9a20c7ff6aa9045&url=http://jenkins:8081/api/vulnerability/critical&maxChildren=&recurse=&contextName=&subtreeOnly=", returnStdout: true).trim()
+                        def response = sh(script: "curl -s \"http://owasp-zap:8091/JSON/spider/action/scan/?apikey=01f9fa39f63adc6b3bbb70d33c6ffbac592bf57d90a87024a9a20c7ff6aa9045&url=http://jenkins:8081/api/vulnerability/critical&maxChildren=&recurse=&contextName=&subtreeOnly=\"", returnStdout: true).trim()
                         echo "Response: ${response}"
-                        //response = sh(script: 'curl -s https://api.example.com/data', returnStdout: true).trim()
-                        //echo "Response: ${response}"
-                        //response = sh(script: 'curl -s https://api.example.com/data', returnStdout: true).trim()
-                        //echo "Response: ${response}"
-                    }   
+                    }
                 }
             }
         }
-        //        script {
-        //            def ptest_name = "pentest_test_$BUILD_NUMBER"
-        //            env.PTEST_N = ptest_name
-        //            def ptest_file = ".env"
-        //            env.PTEST_F = ptest_file
-        //            
-        //            def dockerImage = docker.build("${env.PTEST_N}")
-        //        }
-                //sh "docker build ./ --tag ${env.PTEST_N}"
-        //        echo 'Pentest Docker Builded'
-        //        sh "docker run -d --env.file ${env.PTEST_F} -p 7000:8081 --network=cicd ${env.PTEST_N}"
-        //        echo 'Pentest Docker Started'
-        //    }
-        //}
-        //stage('Deploy') {
-        //    steps {
-        //        sh 'docker-compose -f docker-compose-app.yml up -d'
-        //    }
-        //}
+        stage('Docker Build') {
+            steps {
+                script {
+                    def imageName = "wazuh-export-agent"
+                    def imageTag  = "${imageName}:${env.BUILD_NUMBER}"
+                    env.DOCKER_IMAGE = imageTag
+                    echo "Building Docker image: ${imageTag}"
+                    sh "docker build -t ${imageTag} -t ${imageName}:latest ."
+                    echo "Docker image built successfully: ${imageTag}"
+                }
+            }
+        }
+        stage('Docker Deploy') {
+            steps {
+                script {
+                    echo "Stopping and removing existing application container (if any)..."
+                    sh '''
+                        docker stop wazuh-export-agent || true
+                        docker rm   wazuh-export-agent || true
+                    '''
+                    echo "Starting application container from image: ${env.DOCKER_IMAGE}"
+                    sh """
+                        docker run -d \\
+                            --name wazuh-export-agent \\
+                            --network cicd \\
+                            -p 8081:8081 \\
+                            ${env.DOCKER_IMAGE}
+                    """
+                    echo "Application deployed successfully. Container: wazuh-export-agent"
+                }
+            }
+        }
     }
 }

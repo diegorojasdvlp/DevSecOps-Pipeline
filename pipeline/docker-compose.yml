@@ -16,7 +16,10 @@ services:
 
   jenkins:
     container_name: jenkins
-    image: jenkins/jenkins:lts-jdk21
+    build:
+      context: ./jenkins
+      dockerfile: Dockerfile
+    user: root
     hostname: jenkins
     privileged: true
     ports:
