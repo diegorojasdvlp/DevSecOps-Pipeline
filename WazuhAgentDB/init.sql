@@ -19,6 +19,7 @@ CREATE TABLE IF NOT EXISTS vulnerability_status(
   id BIGSERIAL PRIMARY KEY,
   agent BIGINT,
   vulnerability BIGINT,
+  date TIMESTAMP,
   FOREIGN KEY (agent) REFERENCES agents(id),
   FOREIGN KEY (vulnerability) REFERENCES vulnerabilities(id)
 );
