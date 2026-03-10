@@ -1,0 +1,853 @@
+{
+    "data": {
+        "affected_items": [
+            {
+                "dateAdd": "2023-12-01T14:25:16+00:00",
+                "group_config_status": "synced",
+                "id": "000",
+                "ip": "127.0.0.1",
+                "lastKeepAlive": "9999-12-31T23:59:59+00:00",
+                "manager": "siemold",
+                "name": "siemold",
+                "node_name": "node01",
+                "os": {
+                    "arch": "x86_64",
+                    "codename": "Jammy Jellyfish",
+                    "major": "22",
+                    "minor": "04",
+                    "name": "Ubuntu",
+                    "platform": "ubuntu",
+                    "uname": "Linux |siemold |6.8.0-58-generic |#60~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Fri Mar 28 16:09:21 UTC 2 |x86_64",
+                    "version": "22.04.3 LTS"
+                },
+                "registerIP": "127.0.0.1",
+                "status": "active",
+                "status_code": 0,
+                "version": "Wazuh v4.11.0"
+            },
+            {
+                "configSum": "05c04e117e59c7a3930bc92b49957de0",
+                "dateAdd": "2024-01-03T20:37:56+00:00",
+                "disconnection_time": "2024-04-02T13:58:53+00:00",
+                "group": [
+                    "default"
+                ],
+                "group_config_status": "synced",
+                "id": "010",
+                "ip": "158.170.10.183",
+                "lastKeepAlive": "2024-04-02T13:58:51+00:00",
+                "manager": "eduardosilva-Standard-PC-i440FX-PIIX-1996",
+                "mergedSum": "7852e5ea2c2a65c5b239efc5c0b9eb93",
+                "name": "Wazuh_Loa",
+                "node_name": "node01",
+                "os": {
+                    "arch": "x86_64",
+                    "major": "8",
+                    "name": "CentOS Stream",
+                    "platform": "centos",
+                    "uname": "Linux |loa.usach.cl |4.18.0-448.el8.x86_64 |#1 SMP Wed Jan 18 15:02:46 UTC 2023 |x86_64",
+                    "version": "8"
+                },
+                "registerIP": "any",
+                "status": "disconnected",
+                "status_code": 3,
+                "version": "Wazuh v4.7.0"
+            },
+            {
+                "configSum": "df57ffa493d0c54007636909561af114",
+                "dateAdd": "2024-10-12T20:37:41+00:00",
+                "group": [
+                    "default"
+                ],
+                "group_config_status": "synced",
+                "id": "045",
+                "ip": "158.170.64.242",
+                "lastKeepAlive": "2026-03-09T20:19:07+00:00",
+                "manager": "siemold",
+                "mergedSum": "c451389ffec1994b0494f03180afe28f",
+                "name": "Wazuh_Rahue",
+                "node_name": "node01",
+                "os": {
+                    "arch": "x86_64",
+                    "major": "8",
+                    "name": "CentOS Stream",
+                    "platform": "centos",
+                    "uname": "Linux |rahue |4.18.0-408.el8.x86_64 |#1 SMP Mon Jul 18 17:42:52 UTC 2022 |x86_64",
+                    "version": "8"
+                },
+                "registerIP": "any",
+                "status": "active",
+                "status_code": 0,
+                "version": "Wazuh v4.11.0"
+            },
+            {
+                "configSum": "df57ffa493d0c54007636909561af114",
+                "dateAdd": "2024-10-12T22:29:15+00:00",
+                "disconnection_time": "2025-09-02T00:00:10+00:00",
+                "group": [
+                    "default"
+                ],
+                "group_config_status": "synced",
+                "id": "057",
+                "ip": "158.170.64.138",
+                "lastKeepAlive": "2025-09-02T00:00:09+00:00",
+                "manager": "eduardosilva-Standard-PC-i440FX-PIIX-1996",
+                "mergedSum": "c451389ffec1994b0494f03180afe28f",
+                "name": "openkm",
+                "node_name": "node01",
+                "os": {
+                    "arch": "x86_64",
+                    "codename": "Bionic Beaver",
+                    "major": "18",
+                    "minor": "04",
+                    "name": "Ubuntu",
+                    "platform": "ubuntu",
+                    "uname": "Linux |openkm |4.15.0-213-generic |#224-Ubuntu SMP Mon Jun 19 13:30:12 UTC 2023 |x86_64",
+                    "version": "18.04.3 LTS"
+                },
+                "registerIP": "any",
+                "status": "disconnected",
+                "status_code": 3,
+                "version": "Wazuh v4.11.0"
+            },
+            {
+                "configSum": "df57ffa493d0c54007636909561af114",
+                "dateAdd": "2024-10-15T13:19:30+00:00",
+                "group": [
+                    "default"
+                ],
+                "group_config_status": "synced",
+                "id": "169",
+                "ip": "158.170.10.19",
+                "lastKeepAlive": "2026-03-09T20:19:06+00:00",
+                "manager": "siemold",
+                "mergedSum": "c451389ffec1994b0494f03180afe28f",
+                "name": "db-uxxi-dev",
+                "node_name": "node01",
+                "os": {
+                    "arch": "x86_64",
+                    "major": "7",
+                    "minor": "9",
+                    "name": "Oracle Linux Server",
+                    "platform": "ol",
+                    "uname": "Linux |tolten |4.14.35-1902.3.2.el7uek.x86_64 |#2 SMP Tue Jul 30 03:59:02 GMT 2019 |x86_64",
+                    "version": "7.9"
+                },
+                "registerIP": "any",
+                "status": "active",
+                "status_code": 0,
+                "version": "Wazuh v4.11.0"
+            },
+            {
+                "configSum": "df57ffa493d0c54007636909561af114",
+                "dateAdd": "2024-10-16T14:28:35+00:00",
+                "disconnection_time": "2026-01-19T13:41:39+00:00",
+                "group": [
+                    "default"
+                ],
+                "group_config_status": "synced",
+                "id": "197",
+                "ip": "158.170.66.219",
+                "lastKeepAlive": "2026-01-19T13:30:11+00:00",
+                "manager": "eduardosilva-Standard-PC-i440FX-PIIX-1996",
+                "mergedSum": "c451389ffec1994b0494f03180afe28f",
+                "name": "funcionarios",
+                "node_name": "node01",
+                "os": {
+                    "build": "14393.8594",
+                    "major": "10",
+                    "minor": "0",
+                    "name": "Microsoft Windows Server 2016 Standard",
+                    "platform": "windows",
+                    "uname": "Microsoft Windows Server 2016 Standard",
+                    "version": "10.0.14393.8594"
+                },
+                "registerIP": "any",
+                "status": "disconnected",
+                "status_code": 4,
+                "version": "Wazuh v4.11.0"
+            },
+            {
+                "configSum": "df57ffa493d0c54007636909561af114",
+                "dateAdd": "2024-10-16T19:02:05+00:00",
+                "disconnection_time": "2026-01-15T20:18:05+00:00",
+                "group": [
+                    "default"
+                ],
+                "group_config_status": "synced",
+                "id": "205",
+                "ip": "158.170.10.233",
+                "lastKeepAlive": "2026-01-15T20:17:56+00:00",
+                "manager": "eduardosilva-Standard-PC-i440FX-PIIX-1996",
+                "mergedSum": "c451389ffec1994b0494f03180afe28f",
+                "name": "WIN-IN0D9ENNBME",
+                "node_name": "node01",
+                "os": {
+                    "build": "20348.3932",
+                    "major": "10",
+                    "minor": "0",
+                    "name": "Microsoft Windows Server 2022 Standard",
+                    "platform": "windows",
+                    "uname": "Microsoft Windows Server 2022 Standard",
+                    "version": "10.0.20348.3932"
+                },
+                "registerIP": "any",
+                "status": "disconnected",
+                "status_code": 3,
+                "version": "Wazuh v4.11.0"
+            },
+            {
+                "configSum": "df57ffa493d0c54007636909561af114",
+                "dateAdd": "2024-10-17T12:10:22+00:00",
+                "disconnection_time": "2025-11-25T15:20:52+00:00",
+                "group": [
+                    "default"
+                ],
+                "group_config_status": "synced",
+                "id": "207",
+                "ip": "158.170.10.18",
+                "lastKeepAlive": "2025-11-25T15:20:43+00:00",
+                "manager": "eduardosilva-Standard-PC-i440FX-PIIX-1996",
+                "mergedSum": "c451389ffec1994b0494f03180afe28f",
+                "name": "BD-UXXI-PRD",
+                "node_name": "node01",
+                "os": {
+                    "arch": "x86_64",
+                    "major": "7",
+                    "minor": "9",
+                    "name": "Oracle Linux Server",
+                    "platform": "ol",
+                    "uname": "Linux |BD-UXXI-PRD.usach.cl |4.14.35-1902.3.2.el7uek.x86_64 |#2 SMP Tue Jul 30 03:59:02 GMT 2019 |x86_64",
+                    "version": "7.9"
+                },
+                "registerIP": "any",
+                "status": "disconnected",
+                "status_code": 3,
+                "version": "Wazuh v4.11.0"
+            },
+            {
+                "configSum": "df57ffa493d0c54007636909561af114",
+                "dateAdd": "2024-10-17T18:35:04+00:00",
+                "disconnection_time": "2026-02-07T21:20:23+00:00",
+                "group": [
+                    "default"
+                ],
+                "group_config_status": "synced",
+                "id": "217",
+                "ip": "158.170.10.171",
+                "lastKeepAlive": "2026-02-07T21:06:54+00:00",
+                "manager": "siemold",
+                "mergedSum": "c451389ffec1994b0494f03180afe28f",
+                "name": "DESKTOP-Win102",
+                "node_name": "node01",
+                "os": {
+                    "build": "19045.6456",
+                    "major": "10",
+                    "minor": "0",
+                    "name": "Microsoft Windows 10 Enterprise",
+                    "platform": "windows",
+                    "uname": "Microsoft Windows 10 Enterprise",
+                    "version": "10.0.19045.6456"
+                },
+                "registerIP": "any",
+                "status": "disconnected",
+                "status_code": 4,
+                "version": "Wazuh v4.11.0"
+            },
+            {
+                "configSum": "df57ffa493d0c54007636909561af114",
+                "dateAdd": "2024-10-19T20:49:49+00:00",
+                "disconnection_time": "2025-11-25T20:52:32+00:00",
+                "group": [
+                    "default"
+                ],
+                "group_config_status": "synced",
+                "id": "225",
+                "ip": "158.170.11.36",
+                "lastKeepAlive": "2025-11-25T20:52:29+00:00",
+                "manager": "eduardosilva-Standard-PC-i440FX-PIIX-1996",
+                "mergedSum": "c451389ffec1994b0494f03180afe28f",
+                "name": "gdrcc",
+                "node_name": "node01",
+                "os": {
+                    "arch": "x86_64",
+                    "codename": "Jammy Jellyfish",
+                    "major": "22",
+                    "minor": "04",
+                    "name": "Ubuntu",
+                    "platform": "ubuntu",
+                    "uname": "Linux |gdrcc |5.15.0-138-generic |#148-Ubuntu SMP Fri Mar 14 19:05:48 UTC 2025 |x86_64",
+                    "version": "22.04.4 LTS"
+                },
+                "registerIP": "any",
+                "status": "disconnected",
+                "status_code": 3,
+                "version": "Wazuh v4.11.0"
+            },
+            {
+                "configSum": "df57ffa493d0c54007636909561af114",
+                "dateAdd": "2024-10-19T20:52:28+00:00",
+                "disconnection_time": "2025-11-25T20:52:37+00:00",
+                "group": [
+                    "default"
+                ],
+                "group_config_status": "synced",
+                "id": "226",
+                "ip": "158.170.11.37",
+                "lastKeepAlive": "2025-11-25T20:52:28+00:00",
+                "manager": "eduardosilva-Standard-PC-i440FX-PIIX-1996",
+                "mergedSum": "c451389ffec1994b0494f03180afe28f",
+                "name": "gdrccc",
+                "node_name": "node01",
+                "os": {
+                    "arch": "x86_64",
+                    "codename": "Jammy Jellyfish",
+                    "major": "22",
+                    "minor": "04",
+                    "name": "Ubuntu",
+                    "platform": "ubuntu",
+                    "uname": "Linux |gdrccc |5.15.0-138-generic |#148-Ubuntu SMP Fri Mar 14 19:05:48 UTC 2025 |x86_64",
+                    "version": "22.04.4 LTS"
+                },
+                "registerIP": "any",
+                "status": "disconnected",
+                "status_code": 3,
+                "version": "Wazuh v4.11.0"
+            },
+            {
+                "configSum": "df57ffa493d0c54007636909561af114",
+                "dateAdd": "2024-10-26T21:24:26+00:00",
+                "disconnection_time": "2025-10-22T19:27:04+00:00",
+                "group": [
+                    "default"
+                ],
+                "group_config_status": "synced",
+                "id": "234",
+                "ip": "158.170.66.165",
+                "lastKeepAlive": "2025-10-22T19:12:59+00:00",
+                "manager": "eduardosilva-Standard-PC-i440FX-PIIX-1996",
+                "mergedSum": "c451389ffec1994b0494f03180afe28f",
+                "name": "WIN-PSNT-fscPRD",
+                "node_name": "node01",
+                "os": {
+                    "build": "9600.21620",
+                    "major": "6",
+                    "minor": "3",
+                    "name": "Microsoft Windows Server 2012 R2 Standard",
+                    "platform": "windows",
+                    "uname": "Microsoft Windows Server 2012 R2 Standard",
+                    "version": "6.3.9600.21620"
+                },
+                "registerIP": "any",
+                "status": "disconnected",
+                "status_code": 4,
+                "version": "Wazuh v4.11.0"
+            },
+            {
+                "configSum": "df57ffa493d0c54007636909561af114",
+                "dateAdd": "2024-10-26T22:42:14+00:00",
+                "disconnection_time": "2025-10-22T19:17:04+00:00",
+                "group": [
+                    "default"
+                ],
+                "group_config_status": "synced",
+                "id": "235",
+                "ip": "158.170.66.166",
+                "lastKeepAlive": "2025-10-22T19:02:55+00:00",
+                "manager": "eduardosilva-Standard-PC-i440FX-PIIX-1996",
+                "mergedSum": "c451389ffec1994b0494f03180afe28f",
+                "name": "psfscm91upg",
+                "node_name": "node01",
+                "os": {
+                    "arch": "x86_64",
+                    "major": "6",
+                    "minor": "10",
+                    "name": "Oracle Linux Server",
+                    "platform": "ol",
+                    "uname": "Linux |psfscm91upg |3.8.13-118.55.1.el6uek.x86_64 |#2 SMP Tue Feb 23 22:20:02 PST 2021 |x86_64",
+                    "version": "6.10"
+                },
+                "registerIP": "any",
+                "status": "disconnected",
+                "status_code": 4,
+                "version": "Wazuh v4.11.0"
+            },
+            {
+                "configSum": "df57ffa493d0c54007636909561af114",
+                "dateAdd": "2024-11-26T15:36:37+00:00",
+                "disconnection_time": "2025-11-24T20:36:10+00:00",
+                "group": [
+                    "default"
+                ],
+                "group_config_status": "synced",
+                "id": "279",
+                "ip": "158.170.10.45",
+                "lastKeepAlive": "2025-11-24T20:36:00+00:00",
+                "manager": "eduardosilva-Standard-PC-i440FX-PIIX-1996",
+                "mergedSum": "c451389ffec1994b0494f03180afe28f",
+                "name": "jenkins",
+                "node_name": "node01",
+                "os": {
+                    "arch": "x86_64",
+                    "codename": "Xenial Xerus",
+                    "major": "16",
+                    "minor": "04",
+                    "name": "Ubuntu",
+                    "platform": "ubuntu",
+                    "uname": "Linux |jenkins |4.4.0-210-generic |#242-Ubuntu SMP Fri Apr 16 09:57:56 UTC 2021 |x86_64",
+                    "version": "16.04.7 LTS"
+                },
+                "registerIP": "any",
+                "status": "disconnected",
+                "status_code": 3,
+                "version": "Wazuh v4.11.0"
+            },
+            {
+                "configSum": "5e9ccf0e93a10d1c1700396ba9ccd516",
+                "dateAdd": "2024-12-11T19:26:11+00:00",
+                "disconnection_time": "2025-03-15T04:33:47+00:00",
+                "group": [
+                    "default"
+                ],
+                "group_config_status": "synced",
+                "id": "284",
+                "ip": "158.170.64.238",
+                "lastKeepAlive": "2025-03-15T04:33:40+00:00",
+                "manager": "eduardosilva-Standard-PC-i440FX-PIIX-1996",
+                "mergedSum": "00ba00546ff9ca4b491d21c2646f99af",
+                "name": "admision2024cl3",
+                "node_name": "node01",
+                "os": {
+                    "arch": "x86_64",
+                    "codename": "Jammy Jellyfish",
+                    "major": "22",
+                    "minor": "04",
+                    "name": "Ubuntu",
+                    "platform": "ubuntu",
+                    "uname": "Linux |admision2024cl3 |5.15.0-125-generic |#135-Ubuntu SMP Fri Sep 27 13:53:58 UTC 2024 |x86_64",
+                    "version": "22.04.3 LTS"
+                },
+                "registerIP": "any",
+                "status": "disconnected",
+                "status_code": 3,
+                "version": "Wazuh v4.8.0"
+            },
+            {
+                "configSum": "df57ffa493d0c54007636909561af114",
+                "dateAdd": "2025-04-14T15:13:38+00:00",
+                "group": [
+                    "default"
+                ],
+                "group_config_status": "synced",
+                "id": "330",
+                "ip": "158.170.66.101",
+                "lastKeepAlive": "2026-03-09T20:19:06+00:00",
+                "manager": "siemold",
+                "mergedSum": "c451389ffec1994b0494f03180afe28f",
+                "name": "jailserver",
+                "node_name": "node01",
+                "os": {
+                    "arch": "x86_64",
+                    "codename": "Bionic Beaver",
+                    "major": "18",
+                    "minor": "04",
+                    "name": "Ubuntu",
+                    "platform": "ubuntu",
+                    "uname": "Linux |jailserver |4.15.0-213-generic |#224-Ubuntu SMP Mon Jun 19 13:30:12 UTC 2023 |x86_64",
+                    "version": "18.04.6 LTS"
+                },
+                "registerIP": "any",
+                "status": "active",
+                "status_code": 0,
+                "version": "Wazuh v4.11.0"
+            },
+            {
+                "configSum": "df57ffa493d0c54007636909561af114",
+                "dateAdd": "2025-04-14T15:38:34+00:00",
+                "disconnection_time": "2025-10-22T18:19:05+00:00",
+                "group": [
+                    "default"
+                ],
+                "group_config_status": "synced",
+                "id": "335",
+                "ip": "158.170.66.164",
+                "lastKeepAlive": "2025-10-22T18:18:59+00:00",
+                "manager": "eduardosilva-Standard-PC-i440FX-PIIX-1996",
+                "mergedSum": "c451389ffec1994b0494f03180afe28f",
+                "name": "psofvf1",
+                "node_name": "node01",
+                "os": {
+                    "arch": "x86_64",
+                    "major": "7",
+                    "minor": "9",
+                    "name": "Oracle Linux Server",
+                    "platform": "ol",
+                    "uname": "Linux |vf-1j-bd |5.4.17-2136.321.4.1.el7uek.x86_64 |#2 SMP Wed Jul 19 14:51:35 PDT 2023 |x86_64",
+                    "version": "7.9"
+                },
+                "registerIP": "any",
+                "status": "disconnected",
+                "status_code": 3,
+                "version": "Wazuh v4.11.0"
+            },
+            {
+                "configSum": "df57ffa493d0c54007636909561af114",
+                "dateAdd": "2025-04-14T16:16:38+00:00",
+                "disconnection_time": "2025-10-09T23:59:57+00:00",
+                "group": [
+                    "default"
+                ],
+                "group_config_status": "synced",
+                "id": "338",
+                "ip": "158.170.10.164",
+                "lastKeepAlive": "2025-10-09T23:59:49+00:00",
+                "manager": "eduardosilva-Standard-PC-i440FX-PIIX-1996",
+                "mergedSum": "c451389ffec1994b0494f03180afe28f",
+                "name": "trancurabd",
+                "node_name": "node01",
+                "os": {
+                    "arch": "x86_64",
+                    "major": "7",
+                    "minor": "9",
+                    "name": "Oracle Linux Server",
+                    "platform": "ol",
+                    "uname": "Linux |trancura |5.4.17-2136.317.5.5.el7uek.x86_64 |#2 SMP Wed Apr 5 20:03:33 PDT 2023 |x86_64",
+                    "version": "7.9"
+                },
+                "registerIP": "any",
+                "status": "disconnected",
+                "status_code": 3,
+                "version": "Wazuh v4.11.0"
+            },
+            {
+                "configSum": "df57ffa493d0c54007636909561af114",
+                "dateAdd": "2025-04-14T18:21:49+00:00",
+                "group": [
+                    "default"
+                ],
+                "group_config_status": "synced",
+                "id": "343",
+                "ip": "158.170.11.23",
+                "lastKeepAlive": "2026-03-09T20:19:07+00:00",
+                "manager": "siemold",
+                "mergedSum": "c451389ffec1994b0494f03180afe28f",
+                "name": "rehuedb",
+                "node_name": "node01",
+                "os": {
+                    "arch": "x86_64",
+                    "major": "7",
+                    "minor": "9",
+                    "name": "CentOS Linux",
+                    "platform": "centos",
+                    "uname": "Linux |rehuedb.usach.cl |3.10.0-1160.119.1.el7.x86_64 |#1 SMP Tue Jun 4 14:43:51 UTC 2024 |x86_64",
+                    "version": "7.9"
+                },
+                "registerIP": "any",
+                "status": "active",
+                "status_code": 0,
+                "version": "Wazuh v4.11.0"
+            },
+            {
+                "configSum": "df57ffa493d0c54007636909561af114",
+                "dateAdd": "2025-04-14T18:56:49+00:00",
+                "disconnection_time": "2025-07-30T13:58:20+00:00",
+                "group": [
+                    "default"
+                ],
+                "group_config_status": "synced",
+                "id": "347",
+                "ip": "158.170.66.116",
+                "lastKeepAlive": "2025-07-30T13:58:19+00:00",
+                "manager": "eduardosilva-Standard-PC-i440FX-PIIX-1996",
+                "mergedSum": "c451389ffec1994b0494f03180afe28f",
+                "name": "tickets",
+                "node_name": "node01",
+                "os": {
+                    "arch": "x86_64",
+                    "codename": "Jammy Jellyfish",
+                    "major": "22",
+                    "minor": "04",
+                    "name": "Ubuntu",
+                    "platform": "ubuntu",
+                    "uname": "Linux |tickets |5.15.0-138-generic |#148-Ubuntu SMP Fri Mar 14 19:05:48 UTC 2025 |x86_64",
+                    "version": "22.04.2 LTS"
+                },
+                "registerIP": "any",
+                "status": "disconnected",
+                "status_code": 3,
+                "version": "Wazuh v4.11.0"
+            },
+            {
+                "configSum": "df57ffa493d0c54007636909561af114",
+                "dateAdd": "2025-04-14T18:59:01+00:00",
+                "disconnection_time": "2025-07-30T13:57:07+00:00",
+                "group": [
+                    "default"
+                ],
+                "group_config_status": "synced",
+                "id": "348",
+                "ip": "158.170.66.219",
+                "lastKeepAlive": "2025-07-30T13:56:59+00:00",
+                "manager": "eduardosilva-Standard-PC-i440FX-PIIX-1996",
+                "mergedSum": "c451389ffec1994b0494f03180afe28f",
+                "name": "ctiradolnmp",
+                "node_name": "node01",
+                "os": {
+                    "arch": "x86_64",
+                    "codename": "Jammy Jellyfish",
+                    "major": "22",
+                    "minor": "04",
+                    "name": "Ubuntu",
+                    "platform": "ubuntu",
+                    "uname": "Linux |cristirado |5.15.0-138-generic |#148-Ubuntu SMP Fri Mar 14 19:05:48 UTC 2025 |x86_64",
+                    "version": "22.04.5 LTS"
+                },
+                "registerIP": "any",
+                "status": "disconnected",
+                "status_code": 3,
+                "version": "Wazuh v4.11.0"
+            },
+            {
+                "configSum": "df57ffa493d0c54007636909561af114",
+                "dateAdd": "2025-04-15T21:58:06+00:00",
+                "disconnection_time": "2025-11-14T18:38:56+00:00",
+                "group": [
+                    "default"
+                ],
+                "group_config_status": "synced",
+                "id": "376",
+                "ip": "158.170.10.205",
+                "lastKeepAlive": "2025-11-14T18:38:51+00:00",
+                "manager": "eduardosilva-Standard-PC-i440FX-PIIX-1996",
+                "mergedSum": "c451389ffec1994b0494f03180afe28f",
+                "name": "proxmoxad1",
+                "node_name": "node01",
+                "os": {
+                    "arch": "x86_64",
+                    "codename": "bookworm",
+                    "major": "12",
+                    "name": "Debian GNU/Linux",
+                    "platform": "debian",
+                    "uname": "Linux |proxmoxad1 |6.8.12-8-pve |#1 SMP PREEMPT_DYNAMIC PMX 6.8.12-8 (2025-01-24T12:32Z) |x86_64",
+                    "version": "12"
+                },
+                "registerIP": "any",
+                "status": "disconnected",
+                "status_code": 3,
+                "version": "Wazuh v4.11.0"
+            },
+            {
+                "configSum": "df57ffa493d0c54007636909561af114",
+                "dateAdd": "2025-04-16T13:21:17+00:00",
+                "disconnection_time": "2025-11-19T20:36:41+00:00",
+                "group": [
+                    "default"
+                ],
+                "group_config_status": "synced",
+                "id": "378",
+                "ip": "158.170.10.208",
+                "lastKeepAlive": "2025-11-19T20:36:33+00:00",
+                "manager": "eduardosilva-Standard-PC-i440FX-PIIX-1996",
+                "mergedSum": "c451389ffec1994b0494f03180afe28f",
+                "name": "proxmoxad3",
+                "node_name": "node01",
+                "os": {
+                    "arch": "x86_64",
+                    "codename": "bookworm",
+                    "major": "12",
+                    "name": "Debian GNU/Linux",
+                    "platform": "debian",
+                    "uname": "Linux |proxmoxad3 |6.8.12-8-pve |#1 SMP PREEMPT_DYNAMIC PMX 6.8.12-8 (2025-01-24T12:32Z) |x86_64",
+                    "version": "12"
+                },
+                "registerIP": "any",
+                "status": "disconnected",
+                "status_code": 3,
+                "version": "Wazuh v4.11.0"
+            },
+            {
+                "configSum": "df57ffa493d0c54007636909561af114",
+                "dateAdd": "2025-04-16T20:30:58+00:00",
+                "disconnection_time": "2025-09-24T17:46:53+00:00",
+                "group": [
+                    "default"
+                ],
+                "group_config_status": "synced",
+                "id": "410",
+                "ip": "158.170.64.99",
+                "lastKeepAlive": "2025-09-24T17:46:43+00:00",
+                "manager": "eduardosilva-Standard-PC-i440FX-PIIX-1996",
+                "mergedSum": "c451389ffec1994b0494f03180afe28f",
+                "name": "matlab-usach",
+                "node_name": "node01",
+                "os": {
+                    "arch": "x86_64",
+                    "major": "7",
+                    "minor": "3",
+                    "name": "CentOS Linux",
+                    "platform": "centos",
+                    "uname": "Linux |matlab-usach.usach.cl |3.10.0-514.26.2.el7.x86_64 |#1 SMP Tue Jul 4 15:04:05 UTC 2017 |x86_64",
+                    "version": "7.3"
+                },
+                "registerIP": "any",
+                "status": "disconnected",
+                "status_code": 3,
+                "version": "Wazuh v4.11.0"
+            },
+            {
+                "configSum": "7674a3d9084387d7a6951d3e56dc7f9c",
+                "dateAdd": "2025-04-28T15:13:59+00:00",
+                "disconnection_time": "2025-11-04T14:32:01+00:00",
+                "group": [
+                    "DesarrolloDEI"
+                ],
+                "group_config_status": "synced",
+                "id": "422",
+                "ip": "158.170.68.64",
+                "lastKeepAlive": "2025-11-04T14:32:00+00:00",
+                "manager": "eduardosilva-Standard-PC-i440FX-PIIX-1996",
+                "mergedSum": "cfdd8c5996477ece7a4404c284b63873",
+                "name": "llm-test",
+                "node_name": "node01",
+                "os": {
+                    "arch": "x86_64",
+                    "codename": "Noble Numbat",
+                    "major": "24",
+                    "minor": "04",
+                    "name": "Ubuntu",
+                    "platform": "ubuntu",
+                    "uname": "Linux |sitioswebwp4 |6.8.0-64-generic |#67-Ubuntu SMP PREEMPT_DYNAMIC Sun Jun 15 20:23:31 UTC 2025 |x86_64",
+                    "version": "24.04.2 LTS"
+                },
+                "registerIP": "any",
+                "status": "disconnected",
+                "status_code": 3,
+                "version": "Wazuh v4.11.0"
+            },
+            {
+                "configSum": "df57ffa493d0c54007636909561af114",
+                "dateAdd": "2025-08-21T22:34:10+00:00",
+                "disconnection_time": "2025-08-25T19:13:35+00:00",
+                "group": [
+                    "default"
+                ],
+                "group_config_status": "synced",
+                "id": "455",
+                "ip": "158.170.66.137",
+                "lastKeepAlive": "2025-08-25T19:13:33+00:00",
+                "manager": "eduardosilva-Standard-PC-i440FX-PIIX-1996",
+                "mergedSum": "c451389ffec1994b0494f03180afe28f",
+                "name": "ciudadsur.citi",
+                "node_name": "node01",
+                "os": {
+                    "arch": "x86_64",
+                    "codename": "Bionic Beaver",
+                    "major": "18",
+                    "minor": "04",
+                    "name": "Ubuntu",
+                    "platform": "ubuntu",
+                    "uname": "Linux |ciudadsur |4.15.0-213-generic |#224-Ubuntu SMP Mon Jun 19 13:30:12 UTC 2023 |x86_64",
+                    "version": "18.04.4 LTS"
+                },
+                "registerIP": "any",
+                "status": "disconnected",
+                "status_code": 3,
+                "version": "Wazuh v4.8.0"
+            },
+            {
+                "configSum": "df57ffa493d0c54007636909561af114",
+                "dateAdd": "2025-10-14T19:15:12+00:00",
+                "disconnection_time": "2025-12-02T18:43:03+00:00",
+                "group": [
+                    "default"
+                ],
+                "group_config_status": "synced",
+                "id": "466",
+                "ip": "158.170.66.180",
+                "lastKeepAlive": "2025-12-02T18:30:57+00:00",
+                "manager": "eduardosilva-Standard-PC-i440FX-PIIX-1996",
+                "mergedSum": "c451389ffec1994b0494f03180afe28f",
+                "name": "funcionariosbackrespaldo",
+                "node_name": "node01",
+                "os": {
+                    "build": "14393.8330",
+                    "major": "10",
+                    "minor": "0",
+                    "name": "Microsoft Windows Server 2016 Standard",
+                    "platform": "windows",
+                    "uname": "Microsoft Windows Server 2016 Standard",
+                    "version": "10.0.14393.8330"
+                },
+                "registerIP": "any",
+                "status": "disconnected",
+                "status_code": 4,
+                "version": "Wazuh v4.11.0"
+            },
+            {
+                "configSum": "35ada24911387f24078835c4978c2ad1",
+                "dateAdd": "2025-11-26T14:22:53+00:00",
+                "disconnection_time": "2025-11-26T15:10:26+00:00",
+                "group": [
+                    "Vriic"
+                ],
+                "group_config_status": "synced",
+                "id": "468",
+                "ip": "158.170.66.87",
+                "lastKeepAlive": "2025-11-26T15:10:23+00:00",
+                "manager": "eduardosilva-Standard-PC-i440FX-PIIX-1996",
+                "mergedSum": "e29d5e90e57b1fa14dda4a28f35d83e1",
+                "name": "revistas_OJS",
+                "node_name": "node01",
+                "os": {
+                    "arch": "x86_64",
+                    "codename": "Jammy Jellyfish",
+                    "major": "22",
+                    "minor": "04",
+                    "name": "Ubuntu",
+                    "platform": "ubuntu",
+                    "uname": "Linux |revistasojs |5.15.0-139-generic |#149-Ubuntu SMP Fri Apr 11 22:06:13 UTC 2025 |x86_64",
+                    "version": "22.04.3 LTS"
+                },
+                "registerIP": "any",
+                "status": "disconnected",
+                "status_code": 3,
+                "version": "Wazuh v4.11.0"
+            },
+            {
+                "configSum": "df57ffa493d0c54007636909561af114",
+                "dateAdd": "2026-01-30T18:29:58+00:00",
+                "disconnection_time": "2026-01-30T18:52:36+00:00",
+                "group": [
+                    "default"
+                ],
+                "group_config_status": "synced",
+                "id": "472",
+                "ip": "158.170.68.200",
+                "lastKeepAlive": "2026-01-30T18:34:02+00:00",
+                "manager": "siemold",
+                "mergedSum": "c451389ffec1994b0494f03180afe28f",
+                "name": "generico-ubuntu24lts",
+                "node_name": "node01",
+                "os": {
+                    "arch": "x86_64",
+                    "codename": "Noble Numbat",
+                    "major": "24",
+                    "minor": "04",
+                    "name": "Ubuntu",
+                    "platform": "ubuntu",
+                    "uname": "Linux |generico-ubuntu24lts |6.8.0-79-generic |#79-Ubuntu SMP PREEMPT_DYNAMIC Tue Aug 12 14:42:46 UTC 2025 |x86_64",
+                    "version": "24.04.3 LTS"
+                },
+                "registerIP": "any",
+                "status": "disconnected",
+                "status_code": 4,
+                "version": "Wazuh v4.8.0"
+            }
+        ],
+        "failed_items": [],
+        "total_affected_items": 29,
+        "total_failed_items": 0
+    },
+    "error": 0,
+    "message": "All selected agents information was returned"
+}
