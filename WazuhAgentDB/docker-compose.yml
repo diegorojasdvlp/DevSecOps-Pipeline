@@ -14,7 +14,7 @@ services:
       POSTGRES_DB: ${DB_NAME:-wazuhagentdb}
     # Cambiar a puerto como variable de entorno que se necesite
     ports:
-      - "${DB_PORT:-5432}:5432"
+      - "${DB_PORT:-5433}:5432"
     volumes:
       # Correr el script the inicializacion. Si esta en otro lugar, cambiar por el path
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
@@ -37,6 +37,23 @@ services:
     depends_on:
       - db
   # Seccion donde ira el servicio de java
+  app:
+    image: wazuh-export-agent:latest
+    container_name: wazuh-export-agent
+    restart: unless-stopped
+    ports:
+      - "8081:8081"
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+    - ./config.txt:/app/config.txt
+    environment:
+      DB_HOST: db
+      DB_PORT: ${DB_PORT:-5433}
+      DB_NAME: ${DB_NAME:-wazuhagentdb}
+      DB_USER: ${DB_USER:-admin}
+      DB_PASSWORD: ${DB_PASSWORD:-1234}
 
 volumes:
   db_data:      
